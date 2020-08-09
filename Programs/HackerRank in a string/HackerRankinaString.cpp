@@ -1,3 +1,12 @@
+/*
+
+name: Ethan Herndon
+date: 8/8/2020
+
+https://www.hackerrank.com/challenges/hackerrank-in-a-string/problem
+
+*/
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -59,10 +68,9 @@ string hackerrankInString(string s) {
 
   total = hCount + aCount + cCount + kCount + eCount + rCount + rAgainCount + aAgainCount + nCount + kAgainCount;
   //cout << total;
-  if(total != 10 ){
-    return "NO";
-  }else
-  return "YES";
+  if(total == 10 ){
+    return "YES";
+  }
 }
 
 int main()
