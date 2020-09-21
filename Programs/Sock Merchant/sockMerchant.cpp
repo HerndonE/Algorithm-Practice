@@ -4,8 +4,6 @@ date: 9/20/2020
 
 https://www.hackerrank.com/challenges/sock-merchant/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup
 
-passed 6/9 test cases;
-
 */
 
 #include <bits/stdc++.h>
@@ -20,15 +18,17 @@ int sockMerchant(int n, vector<int> ar) {
     vector<int>unsorted(ar);
     sort(unsorted.begin(),unsorted.end());
     vector<int>sorted(unsorted);
-
     int count = 0;
-    for (int i = 0; i < sorted.size(); i++){
-        if(sorted[i]==sorted[i+=1]){
-            count+=1;
+    for (int i = 0; i < n - 1;){
+        if (sorted[i] == sorted[i + 1]) {
+            count++;
+            i = i + 2;
         }
-
+        else {
+            i++;
+        }
     }
-    cout << count;
+    return count;
 
 
 
